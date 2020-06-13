@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:ignore="MissingClass">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#e2e2e2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Calendar"
+            android:orientation="vertical"
+            android:textSize="31sp"/>
+
+        <TextView
+            android:id="@+id/goalRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:text="달성률: "
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/starsGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="★★★★★"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"/>
+
+    </FrameLayout>
+
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_selectionColor="#a9dbf0cb"
+        app:mcv_showOtherDates="defaults" />
+
+</LinearLayout>
