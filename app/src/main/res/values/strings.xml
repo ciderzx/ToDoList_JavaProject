@@ -2,12 +2,13 @@
     <string name="app_name">ToDoList_JavaProject</string>
     <string name="btn_login">로그인</string>
     <string name="btn_register">회원가입</string>
-    <string name="et_pass">패스워드</string>
-    <string name="et_passck">패스워드 확인</string>
+    <string name="et_pass">비밀번호</string>
+    <string name="et_passck">비밀번호 확인</string>
     <string name="et_name">이름</string>
     <string name="et_company">회사</string>
     <string name="et_hak">학번</string>
     <string name="et_maj">전공</string>
     <string name="validateButton">중복확인</string>
     <string name="et_id">아이디</string>
+    
 </resources>
