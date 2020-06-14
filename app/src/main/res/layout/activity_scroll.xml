@@ -1,70 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScrollActivity">
+    tools:context=".ScrollActivity"
+    android:background="#ffffff"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="#e2e2e2">
 
-        <Button
-            android:id="@+id/button1"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Calendar"
+            android:orientation="vertical"
+            android:textSize="31sp"/>
+
+        <TextView
+            android:id="@+id/goalRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:text="달성률: "
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/starsGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="★★★★★"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 1" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 2" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClicked1"
+                android:id="@+id/add_layout"
+                android:text="레이아웃 추가"
+                tools:ignore="onClick" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 3" />
+            <LinearLayout
+                android:id="@+id/con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/add_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 4" />
+        </RelativeLayout>
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 5" />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 6" />
+    </ScrollView>
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 7" />
+</LinearLayout>
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 8" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Button 9" />
-
-    </LinearLayout>
-</ScrollView>

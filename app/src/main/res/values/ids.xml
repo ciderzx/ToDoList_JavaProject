@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="whenDate" type="id" />
+    <item name="con" type="id" />
+    <item name="add_layout" type="id"/>
 </resources>
