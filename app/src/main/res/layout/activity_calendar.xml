@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".CalendarActivity"
     android:background="#ffffff"
-    android:orientation="vertical"
-    tools:ignore="MissingClass">
+    android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"

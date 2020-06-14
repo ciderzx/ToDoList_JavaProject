@@ -25,6 +25,7 @@
         <activity android:name=".ValidateRequest" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ScrollActivity" />
+        <activity android:name=".CalendarActivity"/>
     </application>
 
 </manifest>
