@@ -57,6 +57,15 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(LoginActivity.this, CalendarActivity.class);
                                 intent.putExtra("log", "User");
                                 intent.putExtra("loginId", userLoginId);
+
+                                UserVo user = new UserVo();
+                                user.setUserId(Integer.parseInt(jasonObject.getString("userId")));
+                                user.setUserName(jasonObject.getString("userName"));
+                                user.setCompanyName(jasonObject.getString("companyName"));
+                                user.setCompleteCnt(Integer.parseInt(jasonObject.getString("completeCnt")));
+                                user.setTodoCnt(Integer.parseInt(jasonObject.getString("todoCnt")));
+
+                                intent.putExtra("User", user);
                                 startActivity(intent);
                             }
 
