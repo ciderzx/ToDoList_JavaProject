@@ -50,18 +50,18 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             JSONObject jasonObject=new JSONObject(response);
                             boolean success=jasonObject.getBoolean("success");
-                            if (success) {//회원등록 성공한 경우
-                                String userLoginId = jasonObject.getString("userLoginId");
-                                String userPass = jasonObject.getString("userPassword");
+                            if (success) {//로그인 성공한 경우
+                                String userLoginId = jasonObject.getString("loginId");
+                                String userPass = jasonObject.getString("password");
                                 Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, CalendarActivity.class);
                                 intent.putExtra("log", "User");
-                                intent.putExtra("userLoginId", userLoginId);
+                                intent.putExtra("loginId", userLoginId);
                                 startActivity(intent);
                             }
 
 
-                            else{//회원등록 실패한 경우
+                            else{//로그인 실패한 경우
                                 Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                                 return;
 
