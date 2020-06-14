@@ -1,19 +1,15 @@
 package com.example.todolist_javaproject;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CalendarView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -27,9 +23,6 @@ import java.util.List;
 import java.util.concurrent.Executors;
 
 public class CalendarActivity extends AppCompatActivity {
-    String time,kcal,menu;
-//    private final OneDayDecorator oneDayDecorator = new OneDayDecorator();
-    Cursor cursor;
     MaterialCalendarView materialCalendarView;
 
     @Override
@@ -45,6 +38,11 @@ public class CalendarActivity extends AppCompatActivity {
                 .setMaximumDate(CalendarDay.from(2030, 11, 31)) // 달력의 끝
                 .setCalendarDisplayMode(CalendarMode.MONTHS)
                 .commit();
+
+        materialCalendarView.addDecorators(
+                new SundayDecorator(),
+                new SaturdayDecorator(),
+                new OneDayDecorator());
 
         String[] result = {"2017,03,18","2017,04,18","2017,05,18","2017,06,18"};
 
@@ -120,6 +118,7 @@ public class CalendarActivity extends AppCompatActivity {
             if (isFinishing()) {
                 return;
             }
+            materialCalendarView.addDecorator(new EventDecorator(Color.RED, calendarDays, CalendarActivity.this));
         }
     }
 }
