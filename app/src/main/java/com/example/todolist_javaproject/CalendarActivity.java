@@ -1,12 +1,19 @@
 package com.example.todolist_javaproject;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -60,9 +67,15 @@ public class CalendarActivity extends AppCompatActivity {
                 materialCalendarView.clearSelection();
 
                 Toast.makeText(getApplicationContext(), shot_Day , Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(CalendarActivity.this, ScrollActivity.class);
+                startActivity(intent);
             }
+
         });
     }
+
+
 
     private class ApiSimulator extends AsyncTask<Void, Void, List<CalendarDay>> {
 
