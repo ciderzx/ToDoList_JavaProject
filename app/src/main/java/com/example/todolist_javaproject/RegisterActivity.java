@@ -1,14 +1,16 @@
 package com.example.todolist_javaproject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,16 +21,28 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText et_id, et_pass, et_name, et_company, et_hak,et_major,et_passck;
-    private Button btn_register,validateButton;
+    private Button btn_register,validateButton,buttonEvent;
     private AlertDialog dialog;
     private boolean validate=false;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        buttonEvent = (Button)findViewById(R.id.btn_register);
+        buttonEvent.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    buttonEvent.setBackgroundColor(Color.parseColor("#02cb54"));
+                } else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    buttonEvent.setBackgroundColor(Color.LTGRAY);
+                }
+
+                return false;
+            }
+        });
         //아이디 값 찾아주기
         et_id=findViewById(R.id.et_id);
         et_pass=findViewById(R.id.et_pass);
