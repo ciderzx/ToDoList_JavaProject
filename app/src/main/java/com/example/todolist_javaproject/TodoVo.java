@@ -3,6 +3,7 @@ package com.example.todolist_javaproject;
 import java.util.Date;
 
 public class TodoVo {
+    private static final long serialVersionUID = 1L;
     private int todoId;
     private String dateId;
     private int userId;
