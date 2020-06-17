@@ -3,4 +3,7 @@
     <item name="whenDate" type="id" />
     <item name="con" type="id" />
     <item name="add_layout" type="id"/>
+    <item name="MainTitle" type="id"/>
+    <item name="popMainTitle" type="id"/>
+    <item name="Data" type="id"/>
 </resources>

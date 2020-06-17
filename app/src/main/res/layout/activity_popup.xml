@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:background="@drawable/border_layout"
+    android:orientation="vertical">
+
+    <!-- 타이틀바 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corner_ui"
+        android:gravity="center"
+        android:text="할 일 작성"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- //end 타이틀바 -->
+
+
+    <EditText
+        android:id="@+id/popMainTitle"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_layout"
+        android:gravity="center"
+        android:hint="@string/popMainTitle"
+        android:inputType="textPersonName"
+        android:minLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/Data"
+        android:layout_width="280dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:hint="@string/Data"
+        android:inputType="text|textMultiLine"
+        android:minLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popMainTitle"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="130dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_layout"
+        android:gravity="center"
+        android:padding="16dp"
+        android:onClick="mOnSave"
+        android:text="저장"
+        android:textColor="#00FF00"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_layout"
+        android:gravity="center"
+        android:onClick="mOnClose"
+        android:padding="16dp"
+        android:text="취소"
+        android:textColor="#FF0000"
+        android:textSize="15sp"
+        tools:ignore="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1" />
+    <!--// 닫기 버튼 -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
