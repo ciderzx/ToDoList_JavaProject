@@ -29,20 +29,21 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        //버튼 하이라이트 효과
         buttonEvent = (Button)findViewById(R.id.btn_register);
+        buttonEvent = (Button)findViewById(R.id.validateButton);
         buttonEvent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    buttonEvent.setBackgroundColor(Color.parseColor("#02cb54"));
+                    buttonEvent.setBackgroundColor(Color.parseColor("#02b754"));
                 } else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     buttonEvent.setBackgroundColor(Color.LTGRAY);
                 }
-
                 return false;
             }
         });
+
         //아이디 값 찾아주기
         et_id=findViewById(R.id.et_id);
         et_pass=findViewById(R.id.et_pass);
