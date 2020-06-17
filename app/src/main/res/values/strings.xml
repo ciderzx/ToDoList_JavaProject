@@ -10,4 +10,7 @@
     <string name="et_maj">전공</string>
     <string name="validateButton">중복확인</string>
     <string name="et_id">아이디</string>
+    <string name="MainTitle">큰 제목</string>
+    <string name="popMainTitle">큰 제목</string>
+    <string name="Data">세부 내용</string>
 </resources>

@@ -67,6 +67,10 @@ public class CalendarActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), shot_Day , Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(CalendarActivity.this, ScrollActivity.class);
+                Intent getIntent = getIntent();
+                UserVo user = (UserVo)getIntent.getSerializableExtra("User");
+                System.out.println("userid : " + user.getUserId());
+                intent.putExtra("User", user);
                 startActivity(intent);
             }
 
@@ -97,15 +101,17 @@ public class CalendarActivity extends AppCompatActivity {
             /*특정날짜 달력에 점표시해주는곳*/
             /*월은 0이 1월 년,일은 그대로*/
             //string 문자열인 Time_Result 을 받아와서 ,를 기준으로짜르고 string을 int 로 변환
-            for(int i = 0 ; i < Time_Result.length ; i ++){
+            for(int i = 0 ; i < Time_Result.length ; i ++) {
                 CalendarDay day = CalendarDay.from(calendar);
                 String[] time = Time_Result[i].split(",");
                 int year = Integer.parseInt(time[0]);
+                System.out.println("year"+year);
                 int month = Integer.parseInt(time[1]);
+                System.out.println("month"+month);
                 int dayy = Integer.parseInt(time[2]);
-
+                System.out.println("dauy"+dayy);
                 dates.add(day);
-                calendar.set(year,month-1,dayy);
+                calendar.set(year, month - 1, dayy);
             }
 
             return dates;
