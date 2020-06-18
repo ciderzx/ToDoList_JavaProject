@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Calendar"
+            android:text="할 일 리스트"
             android:orientation="vertical"
             android:textSize="31sp"/>
 
@@ -28,17 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|top"
-            android:text="달성률: "
-            android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:id="@+id/starsGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:text="★★★★★"
+            android:text="달성률: 0%"
             android:textSize="15sp"
             android:layout_margin="5dp"
             android:textColor="#000000"/>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,8 @@ public class PopupActivity extends Activity {
                             if (success) {//일정 생성 성공한 경우
                                 mainEdit.setText("");
                                 dataEdit.setText("");
+
+
                                 Toast.makeText(getApplicationContext(), "일정 생성 성공", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(PopupActivity.this, ScrollActivity.class);
                                 startActivity(intent);
@@ -90,7 +93,7 @@ public class PopupActivity extends Activity {
     }
 
 
-    //확인 버튼 클릭
+    //닫기 버튼 클릭
     public void mOnClose(View v) {
         finish();
     }
