@@ -8,7 +8,6 @@
         />
     <solid
         android:color="#1a8cfa"/>
-<!--        android:color="#82FFF7"-->
 
     <padding
         android:left="0dp"
