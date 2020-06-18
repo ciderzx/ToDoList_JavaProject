@@ -2,8 +2,11 @@ package com.example.todolist_javaproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,25 +27,31 @@ public class ScrollActivity  extends AppCompatActivity {
         add_view = findViewById(R.id.add_layout);
         main_Title = findViewById(R.id.MainTitle);
 
-    }
-
-    public void mOnPopupClick(View v){
-
         if(ispopup){
-            Intent intent = new Intent(this, PopupActivity.class);
-            Intent getIntent = getIntent();
-            UserVo user = (UserVo)getIntent.getSerializableExtra("User");
-            System.out.println(user.getUserId());
-            intent.putExtra("User", user);
-            startActivityForResult(intent, 1);
-            ispopup = false;
-        }
-        else{
+
             SubList n_layout = new SubList(getApplicationContext());
             LinearLayout con = (LinearLayout)findViewById(R.id.con);
             con.addView(n_layout);
-            ispopup = true;
         }
+
+        else{
+
+            SubList n_layout = new SubList(getApplicationContext());
+            LinearLayout con = (LinearLayout)findViewById(R.id.con);
+            con.addView(n_layout);
+        }
+
+
     }
 
+
+    public void mOnPopupClick(View v){
+        Intent intent = new Intent(this, PopupActivity.class);
+        Intent getIntent = getIntent();
+        UserVo user = (UserVo)getIntent.getSerializableExtra("User");
+        System.out.println(user.getUserId());
+        intent.putExtra("User", user);
+        startActivityForResult(intent, 1);
+        ispopup = false;
+    }
 }

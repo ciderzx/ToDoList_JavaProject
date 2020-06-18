@@ -6,4 +6,6 @@
     <item name="MainTitle" type="id"/>
     <item name="popMainTitle" type="id"/>
     <item name="Data" type="id"/>
+    <item name="SubLayout" type="id"/>
+    <item name="Sub" type="id"/>
 </resources>

@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SubLayout"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:orientation="horizontal"
     android:layout_marginTop="10dp"
-    android:background="@drawable/border_layout">
+    android:background="@drawable/border_layout"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +15,7 @@
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Sub"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp">
@@ -23,8 +25,8 @@
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/border_layout"
-                android:padding="4dp"
                 android:gravity="center"
+                android:padding="4dp"
                 android:text="@string/MainTitle"
                 android:textSize="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
